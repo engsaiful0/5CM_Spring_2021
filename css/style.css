@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+}
+.menu-container {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#menuContainerId {
+    background-color: red;
+}
+table
+{
+    width: 80%;
+}
+.table-border{
+    border-collapse: collapse;
+}
+.image-controller{
+    width: 100%;height: 240px;
+}

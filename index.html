@@ -1,35 +1,65 @@
 <html>
 <head>
     <title>5CM,CSE-3532</title>
-    <style>
-        a {
-            text-decoration: none;
-        }
-        .menu-container {
-            text-align: center;
-            width: 50%;
-            margin: 0 auto;
-        }
-
-        #menuContainerId {
-            background-color: red;
-        }
-        table
-        {
-            width: 80%;
-        }
-    </style>
-</head>
+   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" >
+    <script src="bootstrap/js/bootstrap.js" ></script>
 <body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12 bg-primary">
+            <p>First 3 columns</p>
+            <input type="text" class="form-control" name="studentName" id="studentName" placeholder="Enter student name">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 bg-danger">
+            <p>Second 3 columns</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 bg-light">
+            <p>Third 3 columns</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 bg-success">
+            <p>Fourt 3 columns</p>
+        </div>
+    </div>
+
+</div>
+
+
 <header>
     <div class="menu-container" id="menuContainerId">
         <a href="home.html">Home</a>
         <a href="contact_us.html">Contact Us</a>
     </div>
 </header>
+
+<style>
+    @media screen and (min-width: 800px){
+        .table-size-one
+        {
+            width: 50%;
+        }
+        .table-size-two
+        {
+            width: 50%;
+        }
+
+    }
+    @media screen and (max-width: 800px){
+        .table-size-one
+        {
+            width: 100%;
+        }
+        .table-size-two
+        {
+            width: 100%;
+        }
+
+    }
+</style>
 <section>
     <div class="banner-container">
-        <img style="width: 100%;height: 240px;" src="images/banner.jpg">
+        <img class="image-controller" alt="This is the banner" src="images/banner.jpg">
     </div>
 </section>
 <section>
@@ -48,7 +78,7 @@
 <section>
     <div class="table-container ">
         <div class="basic-table" style="width: 50%;float: left">
-            <table border="1" style="width: 100%!important;">
+            <table  class="table table-hover table-bordered table-bordered" >
                 <thead>
                 <th style="width:25% ">1</th>
                 <th style="width:25% ">2</th>
@@ -68,15 +98,21 @@
                     <td>Column 3</td>
                     <!--        <td>Column 4</td>-->
                 </tr>
+                <tr>
+                    <td>Column 1</td>
+                    <td>Column 2</td>
+                    <td>Column 3</td>
+                    <!--        <td>Column 4</td>-->
+                </tr>
                 </tbody>
             </table>
         </div>
         <div class="student-table" style="width: 50%;float: left">
-            <table border="1" style="width: 100%;">
+            <table border="1" class="table-border table-size-two"  >
                 <tr>
-                    <td>#</td>
+                    <td >#</td>
                     <td>Name</td>
-                    <td>Roll</td>
+                    <td style="background-color: red;color: white">Roll</td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -92,27 +128,41 @@
 <section>
     <div class="form-container ">
         <form action="form_data_save.html">
-            <table>
+            <table >
                 <tr>
                     <td>Student Name</td>
                     <td>
-                        <input type="text" name="studentName" id="studentName" placeholder="Enter student name">
+                        <input type="text" class="form-control" name="studentName" id="studentName" placeholder="Enter student name">
                     </td>
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td><input type="password" name="studentPasword" id="studentPassword" placeholder="Password"></td>
+                    <td><input type="password" class="form-control" name="studentPasword" id="studentPassword" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select  class="form-control" type="text" name="gender" id="gender">
+                            <option disabled value="" selected>Select Gender</option>
+                            <option>
+                                Male
+                            </option>
+                            <option>
+                                Femal
+                            </option>
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Image</td>
                     <td>
-                        <input type="file" name="image">
+                        <input class="form-control" type="file" name="image">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="formSubmit">
+                        <input type="submit" value="Submit" class="btn btn-primary" name="formSubmit">
                     </td>
                 </tr>
             </table>
