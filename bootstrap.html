@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" >-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--    <script src="bootstrap/js/bootstrap.js" ></script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xl-4 bg-success" style="height: 100px;" >
+
+
+        </div>
+        <div class="col-md-4 col-lg col-sm-12 col-xl-4 bg-danger" style="height: 100px;" >
+
+        </div>
+        <div class="col-md-4 col-lg col-sm-12 col-xl-4 bg-primary" style="height: 100px;" >
+
+        </div>
+    </div>
+</div>
+<script>
+    function summation()
+    {
+        var firstNumber=document.getElementById('firstNumber').value;
+        var secondNumber=document.getElementById('secondNumber').value;
+        var summationOfTwoNumbers=Number(firstNumber)+Number(secondNumber);
+
+        document.getElementById('summationOfTwoNumbers').value=summationOfTwoNumbers;
+
+        //alert(Number(firstNumber)+Number(secondNumber));
+        /**/
+    }
+</script>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-header">
+                    <h3>Student Form</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <td>First Number</td>
+                            <td> <input class="form-control" id="firstNumber" name="firstNumber"></td>
+                        </tr>
+                        <tr>
+                            <td>Second Number</td>
+                            <td> <input class="form-control" name="secondNumber" id="secondNumber"></td>
+                        </tr>
+                        <tr>
+                            <td>Summation</td>
+                            <td> <input class="form-control" name="summationOfTwoNumbers" id="summationOfTwoNumbers"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input onclick="summation()" type="button" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
